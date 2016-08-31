@@ -29,10 +29,6 @@ public class CommandResult {
     public String getFeedbackToUser(){
     	return feedbackToUser;
     }
-    
-    public void setFeedbackToUser(){
-    	this.feedbackToUser = feedbackToUser;
-    }
     /**
      * Returns list of persons relevant to the command command result, if any.
      */
