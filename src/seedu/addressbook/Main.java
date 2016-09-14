@@ -37,9 +37,14 @@ public class Main {
 
     /** Runs the program until termination.  */
     public void run(String[] launchArgs) {
-        start(launchArgs);
-        runCommandLoopUntilExitCommand();
-        exit();
+    	try {
+	        start(launchArgs);
+	        runCommandLoopUntilExitCommand();
+	        exit();
+    	} catch (StorageUnavailableException e){
+    		System.out.println("Exception thrown :" + e);
+    	}
+    	
     }
 
     /**
@@ -114,6 +119,7 @@ public class Main {
             throw new RuntimeException(e);
         }
     }
+    
 
     /**
      * Creates the StorageFile object based on the user specified path (if any) or the default storage path.
